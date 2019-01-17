@@ -79,4 +79,4 @@ Cypress.Commands.add('registerNewUser', () => {
 
 ## Testing our components in Laguro
 
-Components we made out of html elements (using JSX) are not that hard to test in cypress. We can see above that we need to pass a unique identifier to cypress methods to gain a handler and simulate DOM events.
+Components we made out of html elements (using JSX) are not that hard to test in cypress. We can see above that we need to pass a unique identifier to cypress methods to gain a handler and simulate DOM events. We just need to pass a unique ID, class or customized attribute to our JSX and cypress methods then cypress testing will be so smooth.\
