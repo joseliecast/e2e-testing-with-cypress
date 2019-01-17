@@ -15,12 +15,61 @@
 2. we will put our tests in `integration` folder
 3. cypress has methods that first require us to pass a handler like ID, class or a customized attribute
 
+example
+
 ```javascript
 cy.registerNewUser().then(() => {
     cy.visit('/')
         .contains('Become a Host')
         .click()
         .get('input[id="officeName"]')
-        .type(OFFICE_NAME)
+        .type('Merge Sort Center')
 })
 ```
+
+`cy.visit('/')` is a method to point cypress what URL it will test\
+cypress methods are chainable means these two implementation will operate just the same
+
+\
+chain
+```
+cy.contains('Become a Host')
+  .click()
+  .get('input[id="officeName"]')
+  .type('Merge Sort Center')
+```
+
+\
+new line
+```
+cy.contains('Become a Host').click()
+cy.get('input[id="officeName"]').type('Merge Sort Center')
+```
+
+\
+`registerNewUser` is a support command I created to simulate registration of a new user
+
+```javascript
+Cypress.Commands.add('registerNewUser', () => {
+    const user = registerForm();
+    const authUrl = 'http://localhost:3000/api/signup';
+
+    return cy
+        .log('resigter a test new user', user)
+        .request('POST', authUrl, user)
+        .then(({ body }) => {
+            client.writeData({
+                data: {
+                    activeUser: {
+                        ...body.user,
+                        __typename: 'ActiveUser',
+                    },
+                    visibleModal: null,
+                },
+            });
+            return Object.assign({}, body.user);
+        });
+});
+```
+\
+[Check out their docs here to try more commands and assertions](https://docs.cypress.io/api/api/table-of-contents.html)
