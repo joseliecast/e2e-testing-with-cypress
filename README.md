@@ -82,5 +82,15 @@ Cypress.Commands.add('registerNewUser', () => {
 - Components we made out of html elements (using JSX) are not that hard to test in cypress.
 - We can see above that we need to pass a unique identifier to cypress methods to gain a handler and simulate DOM events.
 - We just need to pass a unique ID, class or customized attribute to our JSX and cypress methods then cypress testing will be so smooth.
+- [Check this part of the docs for the best practice in selecting elements](https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements)
 
 #### Testing 3rd-party React Components  ---> this is where challenge and pain come in
+##### AntD Components
+
+- components are deeply nested
+- automatically assigning `id` using `name` attribute we provide to form fields
+- most of the time the element you need is not exposed
+\
+deeply nested time picker component
+
+
