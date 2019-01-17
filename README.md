@@ -83,4 +83,4 @@ Cypress.Commands.add('registerNewUser', () => {
 - We can see above that we need to pass a unique identifier to cypress methods to gain a handler and simulate DOM events.
 - We just need to pass a unique ID, class or customized attribute to our JSX and cypress methods then cypress testing will be so smooth.
 
-### 3rd-party React Components ---> this is where challenge and pain come in
+##### Testing 3rd-party React Components  ---> this is where challenge and pain come in
