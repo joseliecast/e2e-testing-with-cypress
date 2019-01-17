@@ -76,7 +76,7 @@ Cypress.Commands.add('registerNewUser', () => {
 \
 [Check out their docs to try more commands and assertions](https://docs.cypress.io/api/api/table-of-contents.html)
 
-\
+
 ## Testing our components in Laguro
 
 Components we made out of html elements (using JSX) are not that hard to test in cypress. We can see above that we need to pass a unique identifier to cypress methods to gain a handler and simulate DOM events.
