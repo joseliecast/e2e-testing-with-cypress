@@ -27,7 +27,9 @@ cy.registerNewUser().then(() => {
 })
 ```
 
-`cy.visit('/')` is a method to point cypress what URL it will test\
+`cy.visit('/')` is a method to point cypress what URL it will test
+\
+\
 cypress methods are chainable means these two implementation will operate just the same
 
 \
@@ -72,4 +74,9 @@ Cypress.Commands.add('registerNewUser', () => {
 });
 ```
 \
-[Check out their docs here to try more commands and assertions](https://docs.cypress.io/api/api/table-of-contents.html)
+[Check out their docs to try more commands and assertions](https://docs.cypress.io/api/api/table-of-contents.html)
+\
+\
+## Testing our components in Laguro
+\
+Components we made out of html elements (using JSX) are not that hard to test in cypress. We can see above that we need to pass a unique identifier to cypress methods to gain a handler and simulate DOM events.
