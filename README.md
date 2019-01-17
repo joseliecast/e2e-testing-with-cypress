@@ -75,7 +75,7 @@ Cypress.Commands.add('registerNewUser', () => {
 ```
 \
 [Check out their docs to try more commands and assertions](https://docs.cypress.io/api/api/table-of-contents.html)
-\
+
 \
 ## Testing our components in Laguro
 
